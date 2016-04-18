@@ -1,0 +1,10 @@
+[package]
+name = "rust-twitter-stream"
+version = "0.1.0"
+authors = ["vrcod"]
+
+[dependencies]
+hyper = "*"
+rustc-serialize = "*"
+url = "*"
+oauthcli = "*"

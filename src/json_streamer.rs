@@ -24,7 +24,7 @@ impl<'a, B> Iterator for JsonObjects<'a, B> where B: BufRead + 'a {
 
         let mut buf: Vec<u8> = Vec::new();
 
-        self.reader.read_until(b'\r', &mut buf);
+        let _ = self.reader.read_until(b'\r', &mut buf);
 
         if buf.last() == Some(&b'\r') {
             buf.pop();
